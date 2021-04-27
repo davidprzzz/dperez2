@@ -34,14 +34,10 @@ module.exports = {
       {
       patterns: [
       { from: 'src/assets', to: 'assets' },
-      { from: 'pwa', to: '' },
       { from: 'src/favicon.png', to: '' }
       ]
       }
       ),
       
-    new InjectManifest({
-      swSrc: path.resolve(__dirname, '../pwa/sw.js')
-    })
   ]
 }
