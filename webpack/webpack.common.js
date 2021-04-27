@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { InjectManifest } = require('workbox-webpack-plugin')
 
 module.exports = {
-  entry: ['./src/scripts/game.js', './webpack/credits.js'],
+  entry: ['./src/scripts/index.js'],
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: '[name].bundle.js',
@@ -30,11 +30,16 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({ gameName: 'My Phaser Game', template: 'src/index.html' }),
-    new CopyWebpackPlugin([
+    new CopyWebpackPlugin(
+      {
+      patterns: [
       { from: 'src/assets', to: 'assets' },
       { from: 'pwa', to: '' },
-      { from: 'src/favicon.ico', to: '' }
-    ]),
+      { from: 'src/favicon.png', to: '' }
+      ]
+      }
+      ),
+      
     new InjectManifest({
       swSrc: path.resolve(__dirname, '../pwa/sw.js')
     })
