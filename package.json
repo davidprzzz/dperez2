@@ -29,7 +29,7 @@
     "author": "David Perez (https://github.com/davidprzzz)"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": "^14.16.1"
   },
   "license": "MIT",
   "devDependencies": {
