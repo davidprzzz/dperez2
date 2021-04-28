@@ -3,6 +3,7 @@ const merge = require('webpack-merge')
 const common = require('./webpack.common')
 const JavaScriptObfuscator = require('webpack-obfuscator')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
 const prod = {
   mode: 'production',
@@ -25,6 +26,7 @@ const prod = {
     }
   },
   plugins: [
+    new CaseSensitivePathsPlugin(),
     new CleanWebpackPlugin({ cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, '../dist/*.js')] }),
     new JavaScriptObfuscator(
       {
