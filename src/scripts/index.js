@@ -21,7 +21,7 @@ const config = {
   },
   scene: [PreloadScene, LoadingScene, PlayScene],
   canvas: document.querySelector('canvas') ,// <-- here!
-  parent: "mygame"
+  parent: "My Phaser Game"
 };
 
 
