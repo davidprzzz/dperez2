@@ -5,8 +5,8 @@
   "main": "./src/scripts/index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack/webpack.dev.js",
-    "bundle": "webpack --config webpack/webpack.prod.js",
-    "build": "npm run build",
+    "build": "webpack --config webpack/webpack.prod.js",
+    "bundle": "npm run build",
     "serve": "serve dist"
   },
   "keywords": [
