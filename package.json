@@ -5,8 +5,6 @@
   "main": "./src/scripts/index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack/webpack.dev.js",
-    "heroku-prebuild": "export NPM_CONFIG_PRODUCTION=false; export NODE_ENV=; NPM_CONFIG_PRODUCTION=false NODE_ENV=development npm install --only=dev --dev",
-    "heroku-postbuild": "export NPM_CONFIG_PRODUCTION=true; export NODE_ENV=production;",
     "build": "webpack --config webpack/webpack.prod.js",
     "bundle": "npm run build",
     "serve": "serve dist"
