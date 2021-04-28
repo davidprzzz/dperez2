@@ -1,7 +1,8 @@
 import Phaser from 'phaser';
-import PlayScene from './scenes/PlayScene.js';
 import PreloadScene from './scenes/PreloadScene.js';
 import LoadingScene from './scenes/LoadingScene.js';
+import PlayScene from './scenes/PlayScene.js';
+
 
 const config = {
   type: Phaser.AUTO,
