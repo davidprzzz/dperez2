@@ -1,7 +1,7 @@
 import Phaser from 'phaser';
-import PreloadScene from 'scenes/PreloadScene.js';
-import LoadingScene from 'scenes/LoadingScene.js';
-import PlayScene from 'scenes/PlayScene.js';
+import PreloadScene from './scenes/PreloadScene';
+import LoadingScene from './scenes/LoadingScene';
+import PlayScene from './scenes/PlayScene';
 
 
 const config = {
